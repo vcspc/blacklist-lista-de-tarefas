@@ -3,6 +3,11 @@
 
 body {
     background-color: $background-color;
-    @include alinhamento-centralizado;
-    flex-wrap: wrap;
+    @include alinhamento-centralizado(column, wrap);
+
+    .cabecalho {
+        @include alinhamento-centralizado(column, wrap);
+    }
 }
+
+
