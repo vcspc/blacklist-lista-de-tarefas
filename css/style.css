@@ -1,0 +1,65 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap'); */
+@font-face {
+  font-family: "Blacklisted";
+  src: url(../fonts/Blacklisted.ttf);
+}
+body {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+body .cabecalho {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+body .cabecalho .cabecalho__titulo {
+  color: #B80103;
+  font-size: 2.5em;
+  /* font-family: 'Archivo Black', sans-serif; */
+  font-family: "Blacklisted", sans-serif;
+}
+body .cabecalho .cabecalho__forms {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+body .cabecalho .cabecalho__forms .cabecalho__forms__campo {
+  border: none;
+  border-bottom: 1px solid white;
+  outline: none;
+  background-color: transparent;
+}
+body .cabecalho .cabecalho__forms .cabecalho__forms__botao {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: white;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+body .tarefas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 80%;
+}
+body .tarefas .tarefas__tarefa {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+/*# sourceMappingURL=style.css.map */

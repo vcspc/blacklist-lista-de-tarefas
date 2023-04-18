@@ -1,0 +1,23 @@
+@mixin alinhamento-centralizado ($direcao, $quebra) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direcao;
+    flex-wrap: $quebra;
+}
+
+@mixin campo {
+    border: none;
+    border-bottom: 1px solid $text-color2;
+    outline: none;
+    background-color: transparent;
+}
+
+@mixin btn {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: $text-color2;
+    font-size: 1.5em;
+    cursor: pointer;
+}

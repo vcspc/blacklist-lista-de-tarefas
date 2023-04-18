@@ -1,7 +1,0 @@
-@mixin alinhamento-centralizado ($direcao, $quebra) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: $direcao;
-    flex-wrap: $quebra;
-}

@@ -1,0 +1,46 @@
+@import 'variaveis';
+@import 'mixins';
+/* @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap'); */
+@font-face {
+    font-family: 'Blacklisted';
+    src: url(../fonts/Blacklisted.ttf);
+}
+
+
+body {
+    background-color: $background-color;
+    @include alinhamento-centralizado(column, wrap);
+
+
+    .cabecalho {
+        @include alinhamento-centralizado(column, wrap);
+    
+        .cabecalho__titulo {
+            color: $text-color;
+            font-size: 2.5em;
+            /* font-family: 'Archivo Black', sans-serif; */
+            font-family: 'Blacklisted', sans-serif;
+        }
+        .cabecalho__forms {
+            @include alinhamento-centralizado(row, nowrap);
+            .cabecalho__forms__campo {
+                @include campo;
+            }
+            .cabecalho__forms__botao {
+                @include btn;
+            }
+        }
+    }
+
+    .tarefas { 
+        @include alinhamento-centralizado(column, wrap);
+        width: 80%;
+
+        .tarefas__tarefa {
+            @include alinhamento-centralizado(row, wrap);
+            width: 100%;
+        }
+    }
+}
+
+
