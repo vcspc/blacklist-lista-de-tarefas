@@ -1,3 +1,11 @@
+/* @mixin checkbox {
+    width: 1em;
+    height: 1em;
+    border: 1px solid $text-color2;
+    border-radius: 50px;
+    background-color: transparent;
+    cursor: pointer;
+} */
 /* @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap'); */
 @font-face {
   font-family: "Blacklisted";
@@ -14,6 +22,7 @@ body {
   align-items: center;
   flex-direction: column;
   flex-wrap: wrap;
+  height: 80%;
 }
 body .cabecalho {
   display: flex;
@@ -27,6 +36,8 @@ body .cabecalho .cabecalho__titulo {
   font-size: 2.5em;
   /* font-family: 'Archivo Black', sans-serif; */
   font-family: "Blacklisted", sans-serif;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
 }
 body .cabecalho .cabecalho__forms {
   display: flex;
@@ -34,6 +45,8 @@ body .cabecalho .cabecalho__forms {
   align-items: center;
   flex-direction: row;
   flex-wrap: nowrap;
+  margin-top: 0em;
+  margin-bottom: 2em;
 }
 body .cabecalho .cabecalho__forms .cabecalho__forms__campo {
   border: none;
@@ -64,21 +77,17 @@ body .tarefas .tarefas__tarefa {
   flex-direction: row;
   flex-wrap: nowrap;
   width: 70%;
-  justify-content: space-between;
-}
-body .tarefas .tarefas__tarefa .tarefas__tarefa__checkbox {
-  width: 1em;
-  height: 1em;
-  border: 1px solid white;
-  border-radius: 50px;
-  background-color: transparent;
-  cursor: pointer;
+  justify-content: center;
+  /* .tarefas__tarefa__checkbox {
+     @include checkbox;
+  } */
 }
 body .tarefas .tarefas__tarefa .tarefas__tarefa__texto {
   color: white;
   font-size: 2em;
   font-family: "Aviola Memories Demo", sans-serif;
   align-self: flex-start;
+  cursor: pointer;
 }
 body .tarefas .tarefas__tarefa .tarefas__tarefa__acao {
   display: flex;

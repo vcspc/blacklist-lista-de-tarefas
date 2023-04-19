@@ -14,6 +14,7 @@
 body {
     background-color: $background-color;
     @include alinhamento-centralizado(column, wrap);
+    height: 80%;
 
 
     .cabecalho {
@@ -24,9 +25,11 @@ body {
             font-size: 2.5em;
             /* font-family: 'Archivo Black', sans-serif; */
             font-family: 'Blacklisted', sans-serif;
+            @include addMargem(1em, 0.5em);
         }
         .cabecalho__forms {
             @include alinhamento-centralizado(row, nowrap);
+            @include addMargem(0em, 2em);
             .cabecalho__forms__campo {
                 @include campo;
             }
@@ -43,16 +46,18 @@ body {
         .tarefas__tarefa {
             @include alinhamento-centralizado(row, nowrap);
             width: 70%;
-            justify-content: space-between;
+            justify-content: center;
 
-            .tarefas__tarefa__checkbox {
+            /* .tarefas__tarefa__checkbox {
                @include checkbox;
-            }
+            } */
             .tarefas__tarefa__texto {
                 color: $text-color2;
                 font-size: 2.0em;
                 font-family: 'Aviola Memories Demo', sans-serif;
                 align-self: flex-start;
+                cursor: pointer;
+
             }
             .tarefas__tarefa__acao {
                 @include alinhamento-centralizado(row, nowrap);

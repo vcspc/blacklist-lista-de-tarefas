@@ -22,11 +22,16 @@
     cursor: pointer;
 }
 
-@mixin checkbox {
+/* @mixin checkbox {
     width: 1em;
     height: 1em;
     border: 1px solid $text-color2;
     border-radius: 50px;
     background-color: transparent;
     cursor: pointer;
+} */
+
+@mixin addMargem ($margem, $margem2) {
+    margin-top: $margem;
+    margin-bottom: $margem2;
 }
