@@ -21,3 +21,12 @@
     font-size: 1.5em;
     cursor: pointer;
 }
+
+@mixin checkbox {
+    width: 1em;
+    height: 1em;
+    border: 1px solid $text-color2;
+    border-radius: 50px;
+    background-color: transparent;
+    cursor: pointer;
+}

@@ -5,6 +5,10 @@
     font-family: 'Blacklisted';
     src: url(../fonts/Blacklisted.ttf);
 }
+@font-face {
+    font-family: 'Aviola Memories Demo';
+    src: url(../fonts/AviolaMemoriesDemo.otf);
+}
 
 
 body {
@@ -37,10 +41,29 @@ body {
         width: 80%;
 
         .tarefas__tarefa {
-            @include alinhamento-centralizado(row, wrap);
-            width: 100%;
+            @include alinhamento-centralizado(row, nowrap);
+            width: 70%;
+            justify-content: space-between;
+
+            .tarefas__tarefa__checkbox {
+               @include checkbox;
+            }
+            .tarefas__tarefa__texto {
+                color: $text-color2;
+                font-size: 2.0em;
+                font-family: 'Aviola Memories Demo', sans-serif;
+                align-self: flex-start;
+            }
+            .tarefas__tarefa__acao {
+                @include alinhamento-centralizado(row, nowrap);
+                
+                .tarefas__tarefa__acao__excluir {
+                    @include btn;
+                }
+                .tarefas__tarefa__acao__editar {
+                    @include btn;
+                }
+            }
         }
     }
 }
-
-

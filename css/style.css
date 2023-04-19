@@ -3,6 +3,10 @@
   font-family: "Blacklisted";
   src: url(../fonts/Blacklisted.ttf);
 }
+@font-face {
+  font-family: "Aviola Memories Demo";
+  src: url(../fonts/AviolaMemoriesDemo.otf);
+}
 body {
   background-color: black;
   display: flex;
@@ -58,8 +62,46 @@ body .tarefas .tarefas__tarefa {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%;
+  flex-wrap: nowrap;
+  width: 70%;
+  justify-content: space-between;
+}
+body .tarefas .tarefas__tarefa .tarefas__tarefa__checkbox {
+  width: 1em;
+  height: 1em;
+  border: 1px solid white;
+  border-radius: 50px;
+  background-color: transparent;
+  cursor: pointer;
+}
+body .tarefas .tarefas__tarefa .tarefas__tarefa__texto {
+  color: white;
+  font-size: 2em;
+  font-family: "Aviola Memories Demo", sans-serif;
+  align-self: flex-start;
+}
+body .tarefas .tarefas__tarefa .tarefas__tarefa__acao {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+body .tarefas .tarefas__tarefa .tarefas__tarefa__acao .tarefas__tarefa__acao__excluir {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: white;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+body .tarefas .tarefas__tarefa .tarefas__tarefa__acao .tarefas__tarefa__acao__editar {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: white;
+  font-size: 1.5em;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */
