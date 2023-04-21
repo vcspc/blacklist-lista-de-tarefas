@@ -61,7 +61,7 @@ body {
             }
             .tarefas__tarefa__acao {
                 @include alinhamento-centralizado(row, nowrap);
-                margin-left: 2em;
+                margin-left: 1em;
                 
                 .tarefas__tarefa__acao__excluir {
                     @include btn;

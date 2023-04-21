@@ -95,7 +95,7 @@ body .tarefas .tarefas__tarefa .tarefas__tarefa__acao {
   align-items: center;
   flex-direction: row;
   flex-wrap: nowrap;
-  margin-left: 2em;
+  margin-left: 1em;
 }
 body .tarefas .tarefas__tarefa .tarefas__tarefa__acao .tarefas__tarefa__acao__excluir {
   border: none;
