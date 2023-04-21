@@ -59,7 +59,7 @@ body .cabecalho .cabecalho__forms .cabecalho__forms__botao {
   outline: none;
   background-color: transparent;
   color: white;
-  font-size: 1.5em;
+  font-size: 1em;
   cursor: pointer;
 }
 body .tarefas {
@@ -95,13 +95,14 @@ body .tarefas .tarefas__tarefa .tarefas__tarefa__acao {
   align-items: center;
   flex-direction: row;
   flex-wrap: nowrap;
+  margin-left: 2em;
 }
 body .tarefas .tarefas__tarefa .tarefas__tarefa__acao .tarefas__tarefa__acao__excluir {
   border: none;
   outline: none;
   background-color: transparent;
   color: white;
-  font-size: 1.5em;
+  font-size: 1em;
   cursor: pointer;
 }
 body .tarefas .tarefas__tarefa .tarefas__tarefa__acao .tarefas__tarefa__acao__editar {
@@ -109,7 +110,7 @@ body .tarefas .tarefas__tarefa .tarefas__tarefa__acao .tarefas__tarefa__acao__ed
   outline: none;
   background-color: transparent;
   color: white;
-  font-size: 1.5em;
+  font-size: 1em;
   cursor: pointer;
 }
 
