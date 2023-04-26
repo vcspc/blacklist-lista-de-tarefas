@@ -35,6 +35,7 @@ body {
             }
             .cabecalho__forms__botao {
                 @include btn;
+                font-size: 2em;
             }
         }
     }
@@ -53,23 +54,29 @@ body {
             } */
             .tarefas__tarefa__texto {
                 color: $text-color2;
-                font-size: 2.0em;
+                font-size: 2.50em;
                 font-family: 'Aviola Memories Demo', sans-serif;
                 align-self: flex-start;
                 cursor: pointer;
 
             }
-            .tarefas__tarefa__acao {
+
+            .tarefas__tarefa__texto--concluida {
+                text-decoration: line-through;
+                color: $text-color;
+                font-size: 2.5em;
+            }
+            /* .tarefas__tarefa__acao {
                 @include alinhamento-centralizado(row, nowrap);
-                margin-left: 1em;
+                margin-left: 1em; */
                 
-                .tarefas__tarefa__acao__excluir {
+            .tarefas__tarefa__excluir {
                     @include btn;
                 }
-                .tarefas__tarefa__acao__editar {
+            .tarefas__tarefa__editar {
                     @include btn;
                 }
             }
         }
     }
-}
+

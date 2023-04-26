@@ -9,6 +9,7 @@ class Tarefa {
 
     toggleConcluida() {
         this.concluida = !this.concluida;
+        return this.concluida;
     }
 }
 
@@ -53,20 +54,26 @@ function atualizarListaTarefas() {
         let li = document.createElement('li');
         let tarefaSpan = document.createElement('span');
         tarefaSpan.innerText = tarefa.descricao;
+        li.classList.add('tarefas__tarefa');
         tarefaSpan.classList.add('tarefas__tarefa__texto');
         tarefaSpan.addEventListener('click', () => {
-            tarefa.toggleConcluida();
+            if (tarefa.toggleConcluida()) {
+                tarefaSpan.classList.add('tarefas__tarefa__texto--concluida');
+            }
             atualizarListaTarefas();
         });
         li.appendChild(tarefaSpan);
         let botaoRemover = document.createElement('button');
-        botaoRemover.innerText = '<i class="fa-regular fa-trash-can fa-sm"></i>';
-        botaoRemover.classList.add('tarefas__tarefa__acao__excluir');
+        let icon = document.createElement('i');
+        /* botaoRemover.innerText = '<i class="fa-regular fa-trash-can fa-sm"></i>'; */
+        botaoRemover.classList.add('tarefas__tarefa__excluir');
+        icon.classList.add('fa-regular', 'fa-trash-can', 'fa-sm');
         botaoRemover.addEventListener('click', () => {
             lista.removerTarefa(index);
             atualizarListaTarefas();
         });
         li.appendChild(botaoRemover);
+        botaoRemover.appendChild(icon);
         listaTarefas.appendChild(li);
     });
 }
