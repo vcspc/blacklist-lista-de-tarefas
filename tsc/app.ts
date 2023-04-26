@@ -41,14 +41,28 @@ const botaoAdicionarTarefa = document.querySelector('#adicionar-tarefa')! as HTM
 const listaTarefas = document.querySelector('#lista-tarefas')! as HTMLUListElement;
 
 let lista = new ListaDeTarefas();
+carregarListaTarefas();
 
 botaoAdicionarTarefa.addEventListener('click', () => {
     let descricao = inputNovaTarefa.value;
     let tarefa = new Tarefa(descricao);
     lista.adicionarTarefa(tarefa);
     inputNovaTarefa.value = '';
+    salvarListaTarefas();
     atualizarListaTarefas();
 });
+
+function salvarListaTarefas(){
+	localStorage.setItem('listaTarefas', JSON.stringify(lista.tarefas));
+}
+
+function carregarListaTarefas(){
+	const listaSalva = localStorage.getItem('ListaTarefas');
+	if (listaSalva) {
+	lista.tarefas = JSON.parse(listaSalva);
+	atualizarListaTarefas();
+	}
+}
 
 function atualizarListaTarefas() {
     listaTarefas.innerHTML = '';
@@ -60,6 +74,7 @@ function atualizarListaTarefas() {
         tarefaSpan.classList.add(tarefa.estilo);
         tarefaSpan.addEventListener('click', () => {
             tarefa.toggleConcluida();
+	    salvarListaTarefas();
             atualizarListaTarefas();
         });
         li.appendChild(tarefaSpan);
@@ -70,6 +85,7 @@ function atualizarListaTarefas() {
         icon.classList.add('fa-regular', 'fa-trash-can', 'fa-sm');
         botaoRemover.addEventListener('click', () => {
             lista.removerTarefa(index);
+	    salvarListaTarefas();
             atualizarListaTarefas();
         });
         li.appendChild(botaoRemover);
