@@ -42,7 +42,7 @@ function salvarListaTarefas() {
     localStorage.setItem('listaTarefas', JSON.stringify(lista.tarefas));
 }
 function carregarListaTarefas() {
-    const listaSalva = localStorage.getItem('ListaTarefas');
+    let listaSalva = localStorage.getItem('listaTarefas');
     if (listaSalva) {
         lista.tarefas = JSON.parse(listaSalva);
         atualizarListaTarefas();

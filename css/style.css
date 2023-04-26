@@ -92,6 +92,7 @@ body .tarefas .tarefas__tarefa .tarefas__tarefa__texto {
   font-size: 2.5em;
   font-family: "Aviola Memories Demo", sans-serif;
   align-self: flex-start;
+  text-align: center;
   cursor: pointer;
 }
 body .tarefas .tarefas__tarefa .tarefas__tarefa__texto--concluida {

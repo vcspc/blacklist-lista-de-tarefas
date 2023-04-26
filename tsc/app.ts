@@ -6,7 +6,7 @@ class Tarefa {
     constructor(descricao: string) {
         this.descricao = descricao;
         this.concluida = false;
-	this.estilo = 'tarefas__tarefa__texto';
+	    this.estilo = 'tarefas__tarefa__texto';
     }
 
     toggleConcluida() {
@@ -57,7 +57,7 @@ function salvarListaTarefas(){
 }
 
 function carregarListaTarefas(){
-	const listaSalva = localStorage.getItem('ListaTarefas');
+	let listaSalva = localStorage.getItem('listaTarefas');
 	if (listaSalva) {
 	lista.tarefas = JSON.parse(listaSalva);
 	atualizarListaTarefas();
@@ -74,7 +74,7 @@ function atualizarListaTarefas() {
         tarefaSpan.classList.add(tarefa.estilo);
         tarefaSpan.addEventListener('click', () => {
             tarefa.toggleConcluida();
-	    salvarListaTarefas();
+	        salvarListaTarefas();
             atualizarListaTarefas();
         });
         li.appendChild(tarefaSpan);
@@ -85,7 +85,7 @@ function atualizarListaTarefas() {
         icon.classList.add('fa-regular', 'fa-trash-can', 'fa-sm');
         botaoRemover.addEventListener('click', () => {
             lista.removerTarefa(index);
-	    salvarListaTarefas();
+	        salvarListaTarefas();
             atualizarListaTarefas();
         });
         li.appendChild(botaoRemover);
