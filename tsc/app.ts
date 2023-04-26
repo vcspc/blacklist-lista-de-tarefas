@@ -1,15 +1,17 @@
 class Tarefa {
     descricao: string;
     concluida: boolean;
+    estilo: string;
 
     constructor(descricao: string) {
         this.descricao = descricao;
         this.concluida = false;
+	this.estilo = 'tarefas__tarefa__texto';
     }
 
     toggleConcluida() {
         this.concluida = !this.concluida;
-        return this.concluida;
+        this.estilo = this.concluida ? 'tarefas__tarefa__texto--concluida' : 'tarefas__tarefa__texto';
     }
 }
 
@@ -55,11 +57,9 @@ function atualizarListaTarefas() {
         let tarefaSpan = document.createElement('span');
         tarefaSpan.innerText = tarefa.descricao;
         li.classList.add('tarefas__tarefa');
-        tarefaSpan.classList.add('tarefas__tarefa__texto');
+        tarefaSpan.classList.add(tarefa.estilo);
         tarefaSpan.addEventListener('click', () => {
-            if (tarefa.toggleConcluida()) {
-                tarefaSpan.classList.add('tarefas__tarefa__texto--concluida');
-            }
+            tarefa.toggleConcluida();
             atualizarListaTarefas();
         });
         li.appendChild(tarefaSpan);
